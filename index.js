@@ -113,7 +113,7 @@ passport.use('local',
                 
               } 
               const token=jwt.sign(sanitizeUser(user),process.env.JWT_SECRET_KEY)//this conatin user data id....
-              done(null, {id:user.id,role:user.role});//this lines sends to serialize
+              done(null, {id:user.id,role:user.role,token});//this lines sends to serialize
         })
 
     
